@@ -25,8 +25,8 @@ class MyApp extends StatelessWidget {
 
       darkTheme: ThemeData(brightness: Brightness.dark),
 
-      initialRoute:
-          "/", // It is use for open the starting screen for your app whenever you want to start from
+      initialRoute: MyRoutes
+          .homeRoute, // It is use for open the starting screen for your app whenever you want to start from
       routes: {
         "/": (context) => const LoginPage(),
         MyRoutes.homeRoute: (context) => const HomePage(),
