@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       theme: ThemeData(
         primarySwatch: Colors.green,
-        // fontFamily: GoogleFonts.lato().fontFamily
+        // fontFamily: GoogleFonts.lato().fontFamily // You can use google fonts from here also
         // primaryTextTheme: GoogleFonts.latoTextTheme()
       ),
 
