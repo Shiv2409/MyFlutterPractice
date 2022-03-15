@@ -1,13 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_mixup_all/models/catlog.dart';
 import 'package:flutter_mixup_all/widgets/drawer.dart';
 import 'package:flutter_mixup_all/widgets/item_widget.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   final int days = 30;
   final String name = "Shivam";
 
-  const HomePage({Key? key}) : super(key: key);
+  @override
+  void initState() {
+    super.initState();
+    loadData();
+  }
+
+  loadData() async {
+    final catalogJson =
+        await rootBundle.loadString("assets/files/catalog.jason");
+  }
 
   @override
   Widget build(BuildContext context) {
